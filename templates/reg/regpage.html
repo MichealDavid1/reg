@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+</head>
+<body>
+  <center>
+    <div>
+      <img src="{% static 'reg/photo.jpg' %}" alt="FUL" width="72" height="72">
+      <h2>Computer Science Students Registration</h2>
+    </div>
+    <div>
+      <table>
+      <form method="post">{% csrf_token %}
+        <div>
+          <table>{{ form.as_table }}</table>
+          <p></p>
+          <input type="submit">
+        </div>
+      </form>
+      </table>
+    </div>
+    <footer>
+      <p>Federal University Lokoja <br> (FUL)</p>
+    </footer>
+  </center>
+</body>
+</html>
